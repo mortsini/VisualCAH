@@ -11,9 +11,13 @@ $(document).ready(function(){
 	}, 'text');
 	
 	$('#action_deal').click(function(){
-		
-		
-		
-		$('#cards').append('<div class="card white-card">'+answers[9]+'</div>');
+		var questionString = questions[Math.floor(questions.length * Math.random())];
+		var numAnswers = Math.max(1, (questionString.match(/_/g) || []).length);
+		$('#cards').empty();
+		$('#cards').append('<div class="card q-color">'+questionString+'</div>');
+		for (var i = 0; i < numAnswers; i++) {
+			var answerString = answers[Math.floor(answers.length * Math.random())];
+			$('#cards').append('<div class="card a-color">'+answerString+'</div>');
+		}
 	});
 });
