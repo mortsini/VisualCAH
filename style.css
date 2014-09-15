@@ -1,0 +1,23 @@
+body {
+	background-color: #666666;
+}
+.card {
+	#font-family: "Helvetica, Arial";
+	font-family: Helvetica, Sans-Serif;
+	font-size: large;
+	font-weight: bold;
+	
+	width: 250px;
+	height: 360px;
+	border-radius:10px;
+	margin: 10px;
+	padding: 20px;
+}
+.black-card {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.white-card {
+	background-color: #FFFFFF;
+	color: #000000;
+}
