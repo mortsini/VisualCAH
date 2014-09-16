@@ -2,7 +2,6 @@ var questions;
 var answers;
 
 $(document).ready(function(){
-	$('p').css("background-color","#0000FF");
 	$.get("against-humanity/questions.txt", function(data,status){
 		questions = data.split('\n');
 	}, 'text');
@@ -12,13 +11,20 @@ $(document).ready(function(){
 	
 	$('#action_deal').click(function(){
 		var questionString = questions[Math.floor(questions.length * Math.random())];
-		var numAnswers = Math.max(1, (questionString.match(/_/g) || []).length);
-		$('#cards').empty();
-		$('#cards').append('<div class="card q-color">'+questionString+'</div>');
+		var numAnswers = Math.max(1, (questionString.match(/_+[^_]*/g) || []).length);
+		$('#questions-container').empty();
+		$('#answers-container').empty();
+		$('#questions-container').append(toCard(questionString, false));
 		for (var i = 0; i < numAnswers; i++) {
 			var answerString = answers[Math.floor(answers.length * Math.random())];
-			$('#cards').append('<div class="card a-color">'+answerString+'</div>');
+			$('#answers-container').append(toCard(answerString, true));
 		}
 		$('.card').effect('slide');
 	});
 });
+
+function toCard(text, isAnswer) {
+	var colorType = (isAnswer) ? 'a' : 'q';
+	return '<span class="card-container"><div class="card '+
+		colorType+'-color">'+text+'</div></span>';
+}

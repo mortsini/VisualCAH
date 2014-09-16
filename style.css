@@ -1,16 +1,26 @@
 body {
 	background-color: #666666;
 }
+#footer {
+	clear:both;
+}
+#footer {
+	clear:both;
+}
+.card-container {
+	background-color: #660000;
+	min-width:100px; width: auto !important; width: 100px; 
+	float: left;
+	margin: 10px;
+}
 .card {
 	font-family: Helvetica, Sans-Serif;
 	font-size: large;
 	font-weight: bold;
 	
 	width: 250px;
-/*	height: 360px; */
-	height: 90px;
+	height: 360px;
 	border-radius:10px;
-	margin: 10px;
 	padding: 20px;
 }
 .q-color {
