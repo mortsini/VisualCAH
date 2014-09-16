@@ -19,5 +19,6 @@ $(document).ready(function(){
 			var answerString = answers[Math.floor(answers.length * Math.random())];
 			$('#cards').append('<div class="card a-color">'+answerString+'</div>');
 		}
+		$('.card').effect('slide');
 	});
 });
