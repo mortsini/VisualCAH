@@ -1,5 +1,5 @@
 body {
-	background-color: #666666;
+	background-color: DimGray;
 }
 #footer {
 	clear:both;
@@ -8,7 +8,7 @@ body {
 	clear:both;
 }
 .card-container {
-	background-color: #660000;
+	/*background-color: #660000;*/
 	min-width:100px; width: auto !important; width: 100px; 
 	float: left;
 	margin: 10px;
@@ -24,10 +24,22 @@ body {
 	padding: 20px;
 }
 .q-color {
-	background-color: #000000;
-	color: #FFFFFF;
+	background-color: black;
+	color: white;
 }
 .a-color {
-	background-color: #FFFFFF;
-	color: #000000;
+	background-color: white;
+	color: black;
 }
+.button-mainstyle {
+	background-color: transparent;
+	color: white;
+	display: block;
+	border-radius: 4px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	min-width: 95%;
+}
+
+

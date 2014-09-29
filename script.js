@@ -9,8 +9,12 @@ $(document).ready(function(){
 		answers = data.split('\n');
 	}, 'text');
 	
-	$('#action_deal').click(function(){
-		var questionString = questions[Math.floor(questions.length * Math.random())];
+	$('#action_deal').click(dealCards);
+	$(document).keypress(dealCards);
+});
+
+function dealCards() {
+	var questionString = questions[Math.floor(questions.length * Math.random())];
 		var numAnswers = Math.max(1, (questionString.match(/_+[^_]*/g) || []).length);
 		$('#questions-container').empty();
 		$('#answers-container').empty();
@@ -20,9 +24,7 @@ $(document).ready(function(){
 			$('#answers-container').append(toCard(answerString, true));
 		}
 		$('.card').effect('slide');
-	});
-});
-
+}
 function toCard(text, isAnswer) {
 	var colorType = (isAnswer) ? 'a' : 'q';
 	return '<span class="card-container"><div class="card '+
