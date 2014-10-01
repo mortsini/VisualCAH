@@ -1,11 +1,42 @@
+html,
 body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
 	background-color: DimGray;
 }
 #footer {
-	clear:both;
+	clear: both;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+#all-container {
+	min-height: 100%;
+	position: relative;
+}
+#header {
+	padding: 10px;
+}
+#content {
+	padding: 10px;
+	padding-bottom: 50px; /* Height of the footer element */
 }
 #footer {
-	clear:both;
+	height: 80px;
+	position: absolute;
+	bottom: 0;
+	clear: both;
+
+	color: white;
+	font-family: Helvetica, Sans-Serif;
+	
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	min-width: 95%;
 }
 .card-container {
 	/*background-color: #660000;*/
@@ -20,7 +51,7 @@ body {
 	
 	width: 250px;
 	height: 360px;
-	border-radius:10px;
+	border-radius: 10px;
 	padding: 20px;
 }
 .q-color {
@@ -30,16 +61,6 @@ body {
 .a-color {
 	background-color: white;
 	color: black;
-}
-.button-mainstyle {
-	background-color: transparent;
-	color: white;
-	display: block;
-	border-radius: 4px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
-	min-width: 95%;
 }
 
 
