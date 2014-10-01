@@ -2,15 +2,21 @@ var questions;
 var answers;
 var dealing = false;
 $(document).ready(function(){
-	$.get("against-humanity/questions.txt", function(data,status){
+	$.get("./questions.txt", function(data,status){
 		questions = data.split('\n');
 	}, 'text');
-	$.get("against-humanity/answers.txt", function(data,status){
+	$.get("./answers.txt", function(data,status){
 		answers = data.split('\n');
 	}, 'text');
+	clearAndDealCards();
 	
-	$('html').click(clearAndDealCards);
-	$(document).keypress(clearAndDealCards);
+	$('#footer').fadeOut(6000);
+	$('html').dblclick(clearAndDealCards);
+	$(document).keypress(function(event){
+		if (event.which == 32) { // Spacebar
+			clearAndDealCards();
+		}
+	});
 });
 
 function clearAndDealCards() {

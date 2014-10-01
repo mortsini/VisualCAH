@@ -18,14 +18,14 @@ body {
 	position: relative;
 }
 #header {
-	padding: 10px;
+	padding: 0px;
 }
 #content {
 	padding: 10px;
-	padding-bottom: 50px; /* Height of the footer element */
+	padding-bottom: 40px; /* Height of the footer element */
 }
 #footer {
-	height: 80px;
+	height: 40px;
 	position: absolute;
 	bottom: 0;
 	clear: both;
@@ -35,8 +35,7 @@ body {
 	
 	margin-left: auto;
 	margin-right: auto;
-	padding: 20px;
-	min-width: 95%;
+	padding: 10px;
 }
 .card-container {
 	/*background-color: #660000;*/
